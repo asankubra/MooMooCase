@@ -24,9 +24,15 @@ public class JoystickController : MonoBehaviour
     public static Action OnwinGame;
     public static Action OnloseGame;
 
+    
+    
+
+    
+
     private void Start()
     {
         PlayerAnimator = GetComponent<Animator>();
+        
     }
     private void Update()
     {
@@ -42,6 +48,8 @@ public class JoystickController : MonoBehaviour
 
         
     }
+
+
 
     private void FixedUpdate()
     {

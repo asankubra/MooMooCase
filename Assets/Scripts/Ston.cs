@@ -7,17 +7,20 @@ public class Ston : MonoBehaviour
     public int Health;
     private float lasthealTime;
     public int SwordDamage;
-   
+
+    public HealthBar healthBar;
+    public int maxHealth = 100;
 
 
     void Start()
     {
-        
+        healthBar.SetMaxHealth(maxHealth);
     }
     public void TakeDamage()
     {
         if (Health < 0) return;
         Health-= SwordDamage;
+        healthBar.SetHealth(Health);
         lasthealTime = Time.time + 2;
         if (Health <= 0)
         {
